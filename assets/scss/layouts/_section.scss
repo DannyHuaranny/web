@@ -1,0 +1,204 @@
+.section {
+    padding: 2rem 0 1rem;
+    .wrap {
+        .content {}
+    }
+    &.newsfeed {
+        .news {
+            @extend .col-sm-8;
+            .wrapper {
+                @extend .card-deck;
+                .page-header {
+                    @extend .col-sm-12;
+                    @include media-breakpoint-down(xs) {
+                        padding-left: 0;
+                        padding-right: 0;
+                    }
+                    h2 {
+                        background-color: tomato;
+                    }
+                }
+                article {
+                    a {
+                        color: tomato;
+                        &:hover {
+                            color: darken(tomato, 5%);
+                        }
+                    }
+                }
+            }
+        }
+        .sidebar {
+            @extend .col-sm-4;
+            .wrapper {
+                @extend .row;
+                .page-header {
+                    @extend .col-sm-12;
+                    h2 {
+                        background-color: $gray-700;
+                    }
+                }
+                .widget {
+                    @extend .col-sm-12;
+                    margin-bottom: 1.5rem;
+                    .entry-content {
+                        background-color: $gray-700;
+                        padding: 1.25rem;
+                        strong {
+                            position: relative;
+                            display: block;
+                            font-weight: normal;
+                            color: $white;
+                            font-size: 3rem;
+                        }
+                        time {
+                            color: $white;
+                            font-size: 80%;
+                            line-height: 1;
+                        }
+                        h4 {
+                            @include media-breakpoint-down(xs) {
+                                font-size: 1rem;
+                            }
+                            font-size: 1.15rem;
+                            a {
+                                color: $white;
+                            }
+                        }
+                    }
+                }
+                &.event {
+                    .page-header {
+                        @extend .col-sm-12;
+                        h2 {
+                            background-color: $green;
+                        }
+                    }
+                    .entry-content {
+                        background-color: $green;
+                    }
+                }
+            }
+        }
+    }
+    &.services {
+        background-color: $sky-blue;
+        .wrap {
+            .content {
+                @extend .row;
+                .page-header {
+                    @extend .col-sm-12;
+                    text-align: center;
+                    margin-bottom: 0.25rem;
+                    h2 {
+                        color: $white;
+                        background-color: $blue;
+                    }
+                }
+                .card-columns {
+                    padding: 0 15px;
+                    .card {
+                        @extend .border-primary;
+                        @extend .mb-3;
+                        @extend .text-center;
+                        background-color: transparent;
+                        a {
+                            i {
+                                font-size: 2rem;
+                                margin-top: 2rem;
+                            }
+                        }
+                        &:hover {
+                            background-color: $blue;
+                            a {
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.footer {}
+}
+
+.map {
+    height: 225px;
+}
+
+.slider-main {
+    /*background-image: url('../images/main_slider__bg.png');
+	background-repeat: no-repeat;
+	background-position: botom center;
+	background-color: $pink;
+	background-size: cover;*/
+    .owl-item {
+        .item-container {
+            @extend .row;
+            @extend .align-items-center;
+            .slider-content {
+                @extend .col;
+                opacity: 0;
+                h3 {
+                    @include font-family('lato', 'bold');
+                    @include media-breakpoint-down(xs) {
+                        font-size: 2rem;
+                    }
+                    font-size: 3.5rem;
+                    color: $red;
+                }
+                p {
+                    font-size: 1rem;
+                }
+                .btn {
+                    @include font-family('lato', 'bold') text-transform: uppercase;
+                    @extend .rounded-0;
+                }
+            }
+            .slider-image {
+                @include media-breakpoint-down(xs) {
+                    display: none;
+                }
+                @extend .col;
+                opacity: 0;
+                img {
+                    width: auto;
+                }
+            }
+        }
+        &.active {
+            .item-container {
+                .slider-content {
+                    @include fadeInDown( $duration: 1s, $delay: .2s, $function: ease, $fill: both);
+                }
+                .slider-image {
+                    @include fadeInUp( $duration: 1s, $delay: .2s, $function: ease, $fill: both);
+                }
+            }
+        }
+    }
+    .owl-dots {
+        position: absolute;
+        bottom: 2rem;
+        left: 0;
+        right: 0;
+        .owl-dot {
+            span {
+                width: .85rem;
+                height: .85rem;
+                border: 2px solid white;
+                background: lighten($orange, 35%);
+            }
+            &:hover {
+                span {
+                    background: lighten($orange, 20%);
+                }
+            }
+            &.active {
+                span {
+                    background: $orange;
+                }
+            }
+        }
+    }
+}

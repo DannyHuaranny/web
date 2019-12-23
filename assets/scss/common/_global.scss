@@ -1,0 +1,359 @@
+@font-face {
+    font-family: 'robotolight';
+    src: url('../fonts/lato/roboto/Roboto-Light.eot');
+    src: url('../fonts/roboto/Roboto-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/roboto/Roboto-Light.woff') format('woff'), url('../fonts/roboto/Roboto-Light.ttf') format('truetype'), url('../fonts/roboto/Roboto-Light.svg#robotolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'latobold';
+    src: url('../fonts/lato/Lato-Bold.eot');
+    src: url('../fonts/lato/Lato-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/lato/Lato-Bold.woff2') format('woff2'), url('../fonts/lato/Lato-Bold.woff') format('woff'), url('../fonts/lato/Lato-Bold.ttf') format('truetype'), url('../fonts/lato/Lato-Bold.svg#latobold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'latoregular';
+    src: url('../fonts/lato/Lato-Regular.eot');
+    src: url('../fonts/lato/Lato-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/lato/Lato-Regular.woff2') format('woff2'), url('../fonts/lato/Lato-Regular.woff') format('woff'), url('../fonts/lato/Lato-Regular.ttf') format('truetype'), url('../fonts/lato/Lato-Regular.svg#latoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'latolight';
+    src: url('../fonts/lato/Lato-Light.eot');
+    src: url('../fonts/lato/Lato-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/lato/Lato-Light.woff2') format('woff2'), url('../fonts/lato/Lato-Light.woff') format('woff'), url('../fonts/lato/Lato-Light.ttf') format('truetype'), url('../fonts/lato/Lato-Light.svg#latolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    -webkit-transition: all .5s ease;
+    transition: all .1s ease;
+}
+
+body {
+    @include font-family();
+    top: 0 !important;
+    background-color: $gray-100;
+}
+
+.skiptranslate {
+    .goog-te-banner-frame {
+        display: none;
+    }
+}
+
+a {
+    color: $link-color;
+    &:hover {
+        color: $link-hover-color;
+        text-decoration: none;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @include font-family('lato',
+    'bold');
+}
+
+.ocultar {
+    @include fadeOutDown( $duration: 1s, $delay: .2s, $function: ease, $fill: both);
+}
+
+.mostrar {
+    @include fadeInUp( $duration: 1s, $delay: .2s, $function: ease, $fill: both);
+}
+
+.fadeIn {
+    @include fadeIn( $duration: 1s, $delay: .2s, $function: ease, $fill: both);
+}
+
+.fadeOut {
+    @include fadeOut( $duration: 1s, $delay: .2s, $function: ease, $fill: both);
+}
+
+.wrap {
+    @extend .container;
+    .content {
+        @extend .row;
+        @include media-breakpoint-down(xs) {
+            margin-bottom: 0;
+        }
+        margin-bottom: 2rem;
+    }
+}
+
+ol.list-group {
+    li {
+        display: list-item !important;
+        font-size: 80%;
+        padding: 0.75rem 0;
+    }
+}
+
+.section {
+    .page-header {
+        padding-bottom: 1.25rem;
+        h2 {
+            color: $gray-100;
+            padding: 7px 15px;
+            background-color: $gray-500;
+            @include media-breakpoint-down(xs) {
+                font-size: 1rem;
+            }
+            font-size: 1.25rem;
+            a {
+                color: $gray-100;
+                &:hover {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+.table-all {
+    @extend .table;
+    @extend .table-striped;
+    @extend .table-bordered;
+    thead,
+    tfoot {
+        tr {
+            @extend .bg-info;
+            th {
+                color: $white;
+            }
+        }
+    }
+    tbody {
+        tr {
+            &.odd {
+                background-color: $sky-blue;
+            }
+            &.even {
+                background-color: lighten($sky-blue, 5%);
+            }
+            td {
+                a {
+                    color: $blue;
+                    &:hover {
+                        color: lighten($blue, 5%);
+                    }
+                }
+                h4 {
+                    @include media-breakpoint-down(xs) {
+                        font-size: 1rem;
+                    }
+                    font-size: 1.25rem;
+                }
+                p {
+                    font-size: 80%;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+                &.text-center {
+                    a {
+                        color: $red;
+                        &:hover {
+                            color: lighten($red, 5%);
+                        }
+                    }
+                }
+                ul {
+                    li {
+                        font-size: .85rem;
+                    }
+                }
+            }
+            &.table-danger {
+                a {
+                    color: $red;
+                    &:hover {
+                        color: darken($red, 15%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.dataTables_wrapper {
+    padding-left: 0;
+    padding-right: 0;
+    table {
+        @extend .table-all;
+    }
+}
+
+.owl-stage-outer {
+    margin-bottom: 20px;
+}
+
+.owl-dots {
+    .owl-dot {
+        span {
+            background: lighten($gray-500, 35%);
+        }
+        &:hover {
+            span {
+                background: lighten($gray-500, 20%);
+            }
+        }
+        &.active {
+            span {
+                background: $gray-500;
+            }
+        }
+    }
+}
+
+main {
+    @extend .col-sm-8;
+    p {
+        text-align: justify;
+    }
+    .fullpage {
+        @extend .col-sm-12;
+    }
+}
+
+aside {
+    @extend .col-sm-3;
+    @extend .ml-sm-auto;
+    a {
+        color: $blue;
+        &:hover {
+            color: lighten($blue, 15%);
+        }
+    }
+}
+
+picture {
+    display: block;
+    position: relative;
+    height: 200px;
+    background-color: $gray-300;
+    a {
+        display: block;
+        text-align: center;
+        line-height: 200px;
+        color: white;
+        font-size: 2rem;
+    }
+}
+
+.page {
+    .page-header {
+        padding-bottom: 1.25rem;
+        margin-bottom: 2rem;
+        border-bottom: .05rem solid #eee;
+        h1 {
+            @include font-family('lato',
+            'light');
+            font-size: 3.5rem;
+        }
+    }
+}
+
+.card {
+    img {
+        @extend .img-fluid;
+    }
+}
+
+.top {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    background-color: $red;
+    border-radius: 36px;
+    vertical-align: middle;
+    color: $white;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3);
+    padding: 0;
+    line-height: 36px;
+    i {
+        font-size: 1rem;
+    }
+    &:hover {
+        background-color: $white;
+        color: $red;
+    }
+}
+
+article {
+    @extend .col-sm-12;
+    border: 0 none;
+    border-radius: 0;
+    margin-bottom: 1.5rem;
+    img {
+        @extend .img-fluid;
+        padding-right: 1rem;
+        float: left;
+    }
+    .entry-content {
+        h4 {
+            a {
+                color: $blue;
+                &:hover {
+                    color: lighten($blue, 15%);
+                }
+            }
+            @include media-breakpoint-down(xs) {
+                font-size: 1rem;
+            }
+            font-size: 1.15rem;
+            margin-bottom: 0.15rem;
+        }
+        time {
+            @extend .text-muted;
+            font-size: 80%;
+        }
+    }
+}
+
+// Responsive min-width
+@include media-breakpoint-up(xs) {}
+
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(xl) {}
+
+// Responsive max-width
+@include media-breakpoint-down(xs) {}
+
+@include media-breakpoint-down(sm) {}
+
+@include media-breakpoint-down(md) {}
+
+@include media-breakpoint-down(lg) {}
+
+// Responsive and
+@include media-breakpoint-only(xs) {}
+
+@include media-breakpoint-only(sm) {}
+
+@include media-breakpoint-only(md) {}
+
+@include media-breakpoint-only(lg) {}
+
+@include media-breakpoint-only(xl) {}

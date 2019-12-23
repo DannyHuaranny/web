@@ -1,0 +1,151 @@
+.section.services.mostrar {
+    margin-top: -50px;
+}
+
+
+/* banner */
+
+.banner {
+    font-family: 'Sans Pro', sans-serif;
+    color: #ffffff;
+    text-align: center;
+    margin-top: -40px;
+}
+
+.banner .padding {
+    background-color: #1f4e79;
+}
+
+.banner .banner-title {
+    margin-top: 30px;
+    font-family: "latolight", sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.card-left {
+    background-color: #0060c0;
+}
+
+.card-left .card-link {
+    color: white;
+    background-color: #e62ce2;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.card-left .card-link a {
+    font-family: "latolight", sans-serif;
+}
+
+.card-link-t {
+    right: 30px;
+    position: absolute;
+    color: white;
+    outline: white 1px solid;
+    padding: 4px;
+    border-radius: 3px;
+    font-family: "latolight", sans-serif;
+    font-size: 16px !important;
+    font-weight: bold;
+}
+
+.card-link-t:hover {
+    background-color: #e62ce2;
+}
+
+.banner .banner-description {
+    margin-top: -5px;
+    font-family: "latolight", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.banner .banner-title-nav {
+    margin-top: 20px;
+    font-size: 1.1em;
+    font-family: "latolight", sans-serif;
+}
+
+.banner-nav div {
+    font-size: 19px;
+    font-family: "latolight", sans-serif;
+    padding: 0 30px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-nav div p {
+    margin-top: 10px;
+}
+
+.banner div {
+    margin: 10px 0;
+}
+
+.banner div span {
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+    display: inline-block;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    background-color: whitesmoke;
+}
+
+.banner div span i {
+    font-size: 40px;
+    transition-duration: 0.3s;
+    color: gray;
+}
+
+.banner div span:hover {
+    border: 5px solid skyblue;
+    background-color: white;
+}
+
+.banner div span:hover i {
+    font-size: 50px;
+    background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.icono {
+    font-size: 1.5em;
+}
+
+
+/* fin footer*/
+
+.c-white {
+    color: white;
+}
+
+
+/*Noticias*/
+
+article.entry {
+    box-shadow: rgb(227, 228, 238) 10px 10px 10px 0px !important;
+    border-radius: 20px;
+    transition-duration: 0.5s;
+}
+
+article.entry img {
+    border-radius: 10px;
+}
+
+article.entry:hover {
+    box-shadow: lightgrey 10px 10px 10px 0px !important;
+    border-radius: 20px;
+    cursor: pointer;
+}

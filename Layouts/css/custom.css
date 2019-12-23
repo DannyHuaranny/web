@@ -1,0 +1,178 @@
+* {
+    font-family: sans-serif;
+    /* Change your font family */
+}
+
+.navbar-static-top,
+.main-footer {
+    padding: 0 !important;
+}
+
+
+/* input disabled */
+
+input:disabled {
+    background: #dddddd !important;
+}
+
+
+/* select label alineaciones*/
+
+.mdb-main-label {
+    /* margin-top: -30px; */
+    color: #2390cf !important;
+}
+
+.mdb-main-label.active {
+    margin-top: -25px;
+    margin-left: -15px;
+}
+
+.mdb-main-label-date {
+    margin-top: 15px;
+    color: #2390cf !important;
+}
+
+.mdb-main-label-data {
+    margin-top: -25px;
+    margin-left: -15px;
+}
+
+.mdb-main-label-equipo {
+    margin-left: -10px;
+}
+
+
+/* end select label alineaciones*/
+
+
+/*labels inputs active*/
+
+label.active {
+    color: #2390cf !important;
+}
+
+#myTable td:last-child {
+    width: 30px !important;
+}
+
+#detalles td:last-child {
+    width: 150px;
+}
+
+#detalles td:first-child {
+    width: 1px;
+}
+
+.content-table .Myhover:hover {
+    color: #136b62!important;
+    cursor: pointer;
+}
+
+.content-table thead tr th {
+    font-weight: bold;
+}
+
+.content-table .Myhover {
+    transition-duration: 0.35s !important;
+}
+
+.content-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr {
+    background-color: #2bbbad!important;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+    padding: 12px 15px;
+}
+
+
+/* .content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+} */
+
+.content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.content-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+
+.card-subtitle {
+    padding: .375rem .75!important;
+    margin: -0.3rem !important;
+    padding-bottom: 0rem !important;
+}
+
+
+/* content table hasta aqui*/
+
+
+/* 
+table.table {
+    table-layout: fixed;
+}
+
+table.table tr th,
+table.table tr td {
+    border-color: #e9e9e9;
+}
+
+table.table th i {
+    font-size: 13px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+table.table th:last-child {
+    width: 100px;
+}
+
+table.table td a {
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 5px;
+    min-width: 24px;
+}
+
+table.table td a.add {
+    color: #27C46B;
+}
+
+table.table td a.edit {
+    color: #FFC107;
+}
+
+table.table td a.delete {
+    color: #E34724;
+}
+
+table.table td i {
+    font-size: 19px;
+}
+
+table.table td a.add i {
+    font-size: 24px;
+    margin-right: -1px;
+    position: relative;
+    top: 3px;
+} */

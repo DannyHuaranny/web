@@ -1,0 +1,27 @@
+//
+// Color system
+//
+$red: #a92d30;
+$pink: #f8efe5;
+$pink-500: darken($pink, 50%);
+$blue: #1f4e79;
+$blue_rgba: rgba(0, 121, 194, 0.85);
+$blue_rgba_5: rgba(0, 121, 194, 0.5);
+$sky-blue: #d3eeff;
+$blue-fb: #3b5998;
+$blue-li: #007bb5;
+$sky-blue-tw: #55acee;
+$red-yt: #ff0000;
+$green-wa: #4dc247;
+$orange: #ffc107;
+$colors: ( red: $red);
+$theme-colors: ( primary: $orange);
+// Links
+//
+// Style anchor elements.
+$link-color: $blue;
+$link-decoration: none !default;
+$link-hover-color: darken($blue, 15%);
+$link-hover-decoration: underline;
+$form-feedback-invalid-color: $red;
+$form-feedback-valid-color: $green-wa;

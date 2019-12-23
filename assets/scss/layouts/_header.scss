@@ -1,0 +1,62 @@
+header {
+    &.header-primary {
+        padding: 1.25rem 1rem;
+        background: $white;
+        @include media-breakpoint-down(xs) {
+            padding-bottom: 0;
+        }
+        .content {
+            @extend .align-items-center;
+            margin-bottom: 0;
+            .logo {
+                @extend .col-sm-3;
+                @include media-breakpoint-down(xs) {
+                    text-align: center;
+                    a {
+                        display: block;
+                        margin: auto;
+                        img {
+                            max-width: 100%
+                        }
+                    }
+                }
+            }
+            .searchbox {
+                @extend .col-sm-4;
+                form {
+                    .input-group {
+                        width: 100%;
+                        input,
+                        button {
+                            @extend .rounded-0;
+                        }
+                        button {
+                            background-color: transparent;
+                            i {
+                                color: $red;
+                            }
+                        }
+                    }
+                }
+            }
+            .contact {
+                @extend .col-sm-5;
+            }
+            .contact {
+                nav {
+                    @extend .nav;
+                    @include media-breakpoint-down(xs) {
+                        justify-content: center !important;
+                    }
+                    justify-content: flex-end !important;
+                    a {
+                        @extend .nav-link;
+                        text-transform: uppercase;
+                        @include font-family('lato', 'bold');
+                        font-size: 80%;
+                    }
+                }
+            }
+        }
+    }
+}

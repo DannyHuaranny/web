@@ -1,0 +1,98 @@
+.dropdown-menu {
+    position: fixed;
+    z-index: 200;
+    top: 20px;
+    left: 20px;
+}
+
+.dropdown {
+    position: inherit;
+}
+
+
+/* .dropdown {
+    position: absolute !important;
+    z-index: 1 !important;
+} */
+
+.button-action {
+    padding: .375rem .75!important;
+    margin: 0rem;
+    font-size: 12px;
+}
+
+.button-option {
+    padding: .375rem .75!important;
+    margin: -0.3rem;
+    font-size: 14px;
+    padding-bottom: 0rem !important;
+  color:gray !important;
+    /*box-shadow: gray 2px 2px 2px 2px;*/
+}
+
+.button-option:hover {
+    box-shadow: gray 2px 2px 2px 2px;
+  
+}
+
+.button-option .tuerca{
+     transition-duration: 0.3s;
+}
+
+.button-option:hover .tuerca{
+     transform: rotate(50deg); 
+    
+        color: dodgerblue !important;
+}
+
+.acciones a .edit {
+    color: rgb(26, 189, 11);
+    border-width: 1px;
+    box-shadow: rgb(26, 189, 11);
+}
+
+.acciones a .delete {
+    color: rgb(230, 57, 14);
+    border-width: 1px;
+    box-shadow: rgb(230, 57, 14);
+}
+
+.btn-default {
+    color: white !important;
+}
+
+.btn-outline-info {
+    transition-duration: 1s;
+}
+
+.btn-outline-info:hover {
+    background-color: rgba(0, 217, 255, 0.123)!important;
+}
+
+.btn-volver {
+    font-size: 40px!important;
+    box-align: inherit;
+    color: white;
+}
+
+.btn-volver:hover {
+    color: white;
+}
+
+.volver {
+    margin-left: 0px;
+}
+
+.main-sidebar {
+    margin-top: 22px;
+}
+
+
+/* .logo{
+    height: 74px;
+position:relative !important;
+}
+
+.logo-lg{
+    height: 74px;
+} */

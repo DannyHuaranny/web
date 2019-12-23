@@ -1,0 +1,10 @@
+.md-progress{
+
+	height: 0.4rem !important;
+	background-color: lime !important;
+	margin: 0 auto !important;
+}
+
+#details label{
+	color: cadetblue;
+}

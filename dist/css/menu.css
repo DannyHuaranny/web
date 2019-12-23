@@ -1,0 +1,93 @@
+#logo_niño {
+    margin-top: -20px;
+    margin-bottom: -10px;
+}
+
+#input-buscar {
+    border-radius: 5px 0px 0px 5px;
+}
+
+.contact nav a {
+    color: #1f4e79;
+}
+
+nav.navbar-primary {
+    background-color: white !important;
+}
+
+nav.navbar-primary .navbar-nav li a {
+    color: #339cad;
+    border-bottom: lightgrey solid 5px;
+}
+
+nav.navbar-primary .navbar-nav li i {
+    background: linear-gradient(to right, #0bd4bf 0%, #330867 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+nav.navbar-primary .navbar-nav li a:hover i {
+background: #eaa325 !important;
+-webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+
+nav.navbar-primary.fixed-top {
+    background-color: white !important;
+}
+
+nav.navbar-primary.fixed-top li a {
+    border-bottom: lightgrey solid 5px;
+}
+
+nav.navbar-primary .navbar-nav li a:hover {
+    color: #a46345;
+    background-color: white;
+    border-bottom: #eaa325 solid 5px;
+}
+
+#navbarsExample07 ul li {
+    /*padding: 5px;*/
+}
+
+#navbarsExample07 ul li a {
+    /*border-radius: 5px !important;*/
+    font-size: 16px;
+    /*text-transform: lowercase;*/
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+#navbarsExample07 ul li a i {
+    /*border-radius: 5px !important;*/
+    font-size: 20px;
+    /*text-transform: lowercase;*/
+}
+
+#navbarsExample07 ul li a::first-letter {
+    border-radius: 5px !important;
+    text-transform: uppercase;
+}
+
+.header-minedu {
+    box-shadow: gray 5px 5px 5px 5px 5px !important;
+    height: 65px;
+    background-color: rgb(227, 228, 238);
+}
+
+.section.services .wrap .content .card-columns .card {
+    transition-duration: 0.4s !important;
+    border-radius: 20px;
+    /*border-radius: 50px 50px 0px 0px ;*/
+}
+
+.section.services .wrap .content .card-columns .card:hover {
+    box-shadow: gray 4px 4px 4px 4px;
+    background-color: transparent;
+}
+
+.section.services .wrap .content .card-columns .card:hover a {}
+
+#home-carousel div img {
+    height: 300px !important;
+}

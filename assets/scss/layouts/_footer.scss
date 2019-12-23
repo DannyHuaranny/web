@@ -1,0 +1,148 @@
+.footer {
+    background-color: $blue;
+    padding: 0 0 15px !important;
+    font-size: 80%;
+    a {
+        color: $gray-300;
+        &:hover {
+            color: $white;
+        }
+    }
+    .footer-pre {
+        @extend .align-items-center;
+        margin-bottom: 0 !important;
+        padding: 2rem 0;
+        .segdi {
+            @extend .col-sm-8;
+            @extend .mr-auto;
+            nav {
+                @include media-breakpoint-down(xs) {
+                    justify-content: center !important;
+                }
+                a:first-child {
+                    padding-left: 0;
+                }
+            }
+        }
+        .translate {
+            @extend .col-sm-4;
+            #google_translate_element {
+                @include media-breakpoint-down(xs) {
+                    float: none !important;
+                }
+                float: right;
+            }
+            /*
+			ul.social-nav{
+				@extend .nav;
+				@include media-breakpoint-down(xs) {
+					justify-content: center !important;
+				}
+				@extend .justify-content-end;
+				li{
+					@extend .nav-item;
+					a{
+						@extend .nav-link;
+						
+						i{
+							font-size: 1.25rem;
+						}
+					}
+					&.facebook{
+						a{
+							&:hover{
+								color: $blue;
+							}
+						}
+					}
+					&.twitter{
+						a{
+							&:hover{
+								color: $sky-blue;
+							}
+						}
+					}
+					&.linkedin{
+						a{
+							&:hover{
+								color: $blue;
+							}
+						}
+					}
+					&.youtube{
+						a{
+							&:hover{
+								color: $red;
+							}
+						}
+					}
+				} 
+			}
+			*/
+        }
+    }
+    .footer-post {
+        @extend .align-items-start;
+        /* border-top: 1px solid #404040;
+	    border-bottom: 1px solid #404040;
+	    */
+        padding: 2rem 0;
+        margin-bottom: 1rem !important;
+        nav {
+            a {
+                padding: 0.25rem 0;
+            }
+        }
+        .nav-links {
+            @extend .col-sm-3;
+            @include media-breakpoint-down(xs) {}
+            h2 {
+                @include font-family('lato', 'bold') font-size: 0.85rem;
+                margin: 0 0 14px;
+                color: $white;
+                text-transform: uppercase;
+            }
+            P {
+                color: $white;
+            }
+            ul {
+                @extend .nav;
+                @extend .flex-column;
+                li {
+                    @extend .nav-item;
+                    i {
+                        color: $gray-300;
+                        top: 0.7em;
+                    }
+                    a {
+                        @extend .nav-link;
+                        padding: 0.25rem 0;
+                    }
+                }
+            }
+            &.nav-contact {
+                @extend .col-sm-6;
+            }
+        }
+    }
+    .footer-copy {
+        @extend .align-items-center;
+        margin-bottom: 0 !important;
+        .copy {
+            @extend .col-sm-8;
+            @extend .mr-auto;
+        }
+        .social-nav {
+            @extend .col-sm-4;
+            @extend .nav;
+            @extend .justify-content-end;
+            a {
+                border: 1px solid $gray-300;
+                margin-left: 0.5rem;
+                i {
+                    color: $gray-300;
+                }
+            }
+        }
+    }
+}
