@@ -20,10 +20,10 @@
 		}
 		//Conexión a la BD
 		public function connect_db(){
-			$this->con = new PDO('mysql:host=localhost;dbname=db_ugelweb', "root", "");
+			/*$this->con = new PDO('mysql:host=localhost;dbname=db_ugelweb', "root", "");
 			if(mysqli_connect_error()){
 				die("Conexión a la base de datos falló " . mysqli_connect_error() . mysqli_connect_errno());
-			}
+			}*/
 		}
 	
 		public function ver(){
