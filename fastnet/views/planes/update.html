@@ -1,0 +1,17 @@
+{% extends "layout.twig" %} {% block content %}
+<h1>Editar Plan</h1>
+
+<form class="form" action="/fastnet/planes/{{ plan.plan_id }}/update" method="post">
+    <label for="">Nombre Plan:</label>
+    <input type="text" name="plan_nombre" value="{{ plan.plan_nombre }}"><br>
+
+    <label for="">Subida:</label>
+    <input type="text" name="subida" value="{{ plan.subida }}"><br>
+    <label for="">Bajada:</label>
+    <input type="text" name="bajada" value="{{ plan.bajada }}"><br>
+    <label for="">Precio:</label>
+    <input type="text" name="precio" value="{{ plan.precio }}"><br>
+
+    <button type="submit">Actualizar</button>
+</form>
+{% endblock %}

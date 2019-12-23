@@ -1,0 +1,13 @@
+{% extends "layout.twig" %} {% block content %}
+<h1>Nuevo Zona</h1>
+
+<form class="form" action="/fastnet/zonas/save" method="post">
+    <label for="">Nombre Zona:</label>
+    <input type="text" name="zona_nombre"><br>
+
+    <label for="">Zona Caja:</label>
+    <input type="text" name="zona_caja"><br>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+{% endblock %}

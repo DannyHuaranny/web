@@ -1,0 +1,34 @@
+{% extends "layout.twig" %}
+
+{% block title %}Clientes - Fastnet{% endblock %}
+
+{% block content %}
+    <h1>Lista de Clientes</h1>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <td>Cliente</td>    
+            <td>DNI</td>    
+            <td>Direccion</td>    
+            <td>Celular</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        </thead>
+        <tbody>
+        {% for cliente in clientes %}
+        <tr>
+            <td>{{ cliente.nombre }}</td>
+            <td>{{ cliente.doc_num }}</td>
+            <td>{{ cliente.direccion }}</td>
+            <td>{{ cliente.movil }}</td>
+            <td><a href="clientes/{{ cliente.persona_id }}/delete">Eliminar</a></td>
+            <td><a href="clientes/{{ cliente.persona_id }}/update">Editar</a></td>
+            <td><a href="clientes/{{ cliente.persona_id }}/perfil">Detalle</a></td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

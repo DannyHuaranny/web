@@ -1,0 +1,36 @@
+{% extends "layout.twig" %}
+
+{% block title %}Users - FastNet{% endblock %}
+
+{% block content %}
+    <h1>Lista de Usuarios</h1>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <td>Nombre</td>   
+            <td>Usuario</td>   
+            <td>Documento</td>    
+            <td>Ciudad</td>    
+            <td>Celular</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        </thead>
+        <tbody>
+        {% for user in usuarios %}
+        <tr>
+            <td>{{ user.nombre }}</td>
+            <td>{{ user.user }}</td>
+            <td>{{ user.doc_num }}</td>
+            <td>{{ user.ciudad }}</td>
+            <td>{{ user.movil }}</td>
+            <td><a href="users/{{ user.usuario_id }}/{{ user.persona_id }}/delete">Eliminar</a></td>
+            <td><a href="users/{{ user.persona_id }}/update">Editar</a></td>
+            <td><a href="users/{{ user.persona_id }}/perfil">Detalle</a></td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

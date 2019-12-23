@@ -1,0 +1,28 @@
+{% extends "layout.twig" %} {% block content %}
+<h1>Nuevo Usuario</h1>
+{{ mensaje }}
+
+<form class="form col-md-6" action="/fastnet/users/save" method="post">
+    <label for="">Persona:</label>
+    <select name="persona_id" id="" class="form-control selectpicker" data-live-search="true">
+            {% for persona in personas %}
+            <option value="{{ persona.persona_id }}">{{ persona.nombre }}</option>
+            {% endfor %}
+        </select><br>
+
+    <label for="">Tipo Persona:</label>
+    <select name="usuario_tipo" id="" class="form-control selectpicker" data-live-search="true">
+           
+            <option value="ADMIN">Administrador</option>
+            <option value="VENDEDOR">Vendedor</option>
+            <option value="TECNICO">Técnico</option>
+           
+        </select><br>
+    <label for="">Usuario:</label>
+    <input type="text" name="user" class="form-control"><br>
+
+    <label for="">Passowrd:</label>
+    <input type="password" name="password" class="form-control"><br>
+    <button type="submit">Save</button>
+</form>
+{% endblock %}

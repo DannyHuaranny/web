@@ -1,0 +1,13 @@
+{% extends "layout.twig" %} {% block content %}
+<h1>Editar Servicio</h1>
+
+<form class="form" action="/fastnet/servicios/{{ servicio.servicio_id }}/update" method="post">
+    <label for="">Nombre Servicio:</label>
+    <input type="text" name="servicio_nombre" value="{{ servicio.servicio_nombre }}"><br>
+
+    <label for="">Costo Servicio:</label>
+    <input type="text" name="precio" value="{{ servicio.precio }}"><br>
+
+    <button type="submit" class="btn btn-primary">Actualizar</button>
+</form>
+{% endblock %}

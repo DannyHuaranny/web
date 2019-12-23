@@ -1,0 +1,29 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+    <h1>Nuevo Contrato</h1>
+
+    <form class="form col-md-6" action="/fastnet/clientes/save" method="post">
+        <label for="">Selecciona al cliente:</label>
+        <select class="form-control selectpicker" data-live-search="true" name="doc_tipo">
+            {% for cliente in clientes %}
+            <option value="{{cliente.persona_id}}">{{ cliente.nombre}}</option>
+            {% endfor %}
+        </select><br>
+        <label for="">Selecciona el plan:</label>
+        <select class="form-control selectpicker" name="doc_tipo">
+            {% for plan in planes %}
+            <option value="{{plan.plan_id}}">{{ plan.plan_nombre}}</option>
+            {% endfor %}
+        </select><br>
+        <label for="">Selecciona los planes:</label>
+        <input class="form-control" type="text" name="doc_num"><br>
+        <label for="">Celular:</label>
+        <input class="form-control" type="text" name="movil"><br>
+        <label for="">Direccion:</label>
+        <input class="form-control" type="text" name="direccion"><br>
+        <label for="">Referencia:</label><br>
+        <textarea name="referencia"></textarea><br>
+        <button type="submit">Save</button>
+    </form>
+{% endblock %}

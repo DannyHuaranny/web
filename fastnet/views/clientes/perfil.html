@@ -1,0 +1,12 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+    <h1>{{ cliente.nombre }}</h1>
+
+    <ul>
+        <li>Documento: {{ cliente.doc_num }}</li>
+        <li>Celular: {{ cliente.movil }}</li>
+        <li>Direccion: {{ cliente.direccion }}</li>
+        <li>Referencia: {{ cliente.referencia }}</li>
+    </ul>
+{% endblock %}

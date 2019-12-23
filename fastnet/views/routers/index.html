@@ -1,0 +1,31 @@
+{% extends "layout.twig" %} {% block content %}
+<h1>Lista de Routers</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>Nombre Router</td>
+            <td>IP Router</td>
+            <td>Usuario</td>
+            <td>Contraseña</td>
+            <td></td>
+            <td></td>
+
+        </tr>
+    </thead>
+    <tbody>
+        {% for router in routers %}
+        <tr>
+            <td>{{ router.router_nombre }}</td>
+            <td>{{ router.router_ip }}</td>
+            <td>{{ router.router_user }}</td>
+            <td>{{ router.router_pass }}</td>
+
+            <td><a href="routers/{{ router.router_id }}/delete">Eliminar</a></td>
+            <td><a href="routers/{{ router.router_id }}/update">Editar</a></td>
+
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

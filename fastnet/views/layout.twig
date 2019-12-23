@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta
+		name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+
+        <link rel="stylesheet" href="/fastnet/public/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/fastnet/public/css/style.css">
+        <link rel="stylesheet" href="/fastnet/public/css/bootstrap-select.min.css">
+        <script>
+            document.getElementsByTagName("html")[0].className += " js";
+        </script>
+        <link rel="stylesheet" href="/fastnet/public/css/sidebar.css">
+
+        <title>{% block title %}{# aqui el Titulo #}{% endblock %}</title>
+	</head>
+
+	<body>
+        <header class="cd-main-header js-cd-main-header">
+        <div class="cd-logo-wrapper">
+            <a href="#0" class="cd-logo"><img src="/fastnet/public/img/cd-logo.svg" alt="Logo"></a>
+        </div>
+
+        <div class="cd-search js-cd-search">
+            <form>
+                <input class="reset" type="search" placeholder="Search...">
+            </form>
+        </div>
+
+        <button class="reset cd-nav-trigger js-cd-nav-trigger" aria-label="Toggle menu"><span></span></button>
+
+        <ul class="cd-nav__list js-cd-nav__list">
+            <li class="cd-nav__item"><a href="#0">Contacto</a></li>
+            <li class="cd-nav__item"><a href="#0">Ayuda</a></li>
+            <li class="cd-nav__item cd-nav__item--has-children cd-nav__item--account js-cd-item--has-children">
+                <a href="#0">
+                    <img src="/fastnet/public/img/cd-avatar.svg" alt="avatar">
+                    <span>Cuenta</span>
+                </a>
+
+                <ul class="cd-nav__sub-list">
+                    <li class="cd-nav__sub-item"><a href="#0">Mi Cuenta</a></li>
+                    <li class="cd-nav__sub-item"><a href="#0">Perfil</a></li>
+                    <li class="cd-nav__sub-item"><a href="/fastnet/logout">Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+
+    <main class="cd-main-content">
+        <nav class="cd-side-nav js-cd-side-nav">
+            <ul class="cd-side__list js-cd-side__list">
+                <li class="cd-side__label"><span>Home</span></li>
+                <li class="cd-side__item cd-side__item--has-children cd-side__item--overview js-cd-item--has-children">
+                    <a href="#0">Clientes</a>
+
+                    <ul class="cd-side__sub-list">
+                        <li class="cd-side__sub-item"><a href="/fastnet/clientes">Listado</a></li>
+                        <li class="cd-side__sub-item"><a href="/fastnet/contratos">Contratos</a></li>
+                       
+                    </ul>
+                </li>
+
+                <li class="cd-side__item cd-side__item--has-children cd-side__item--notifications cd-side__item--selected js-cd-item--has-children">
+                    <a href="#0">Servicios</a>
+
+                    <ul class="cd-side__sub-list">
+                        <li class="cd-side__sub-item"><a aria-current="page" href="/fastnet/instalaciones">Instalación</a></li>
+                        <li class="cd-side__sub-item"><a href="/fastnet/averias">Averías</a></li>
+                        <li class="cd-side__sub-item"><a href="/fastnet/bajas">Bajas</a></li>
+                    </ul>
+                </li>
+
+              
+            </ul>
+
+            <ul class="cd-side__list js-cd-side__list">
+                <li class="cd-side__label"><span>Sistema</span></li>
+                <li class="cd-side__item cd-side__item--has-children cd-side__item--bookmarks js-cd-item--has-children">
+                    <a href="#0">Router</a>
+
+                    <ul class="cd-side__sub-list">
+                        <li class="cd-side__sub-item"><a href="/fastnet/routers">Routers</a></li>
+                        <li class="cd-side__sub-item"><a href="/fastnet/zonas">Zonas</a></li>
+                        <li class="cd-side__sub-item"><a href="/fastnet/ips">Ip Cliente</a></li>
+
+                    </ul>
+                </li>
+
+                <li class="cd-side__item cd-side__item--has-children cd-side__item--images js-cd-item--has-children">
+                    <a href="#0">Instalacion</a>
+
+                    <ul class="cd-side__sub-list">
+                        <li class="cd-side__sub-item"><a href="/fastnet/planes">Planes</a></li>
+                        <li class="cd-side__sub-item"><a href="/fastnet/instalaciones-tipo">Tipos Instalacion</a></li>
+                        <li class="cd-side__sub-item"><a href="/fastnet/servicios">Servicios</a></li>
+                        <li class="cd-side__sub-item"><a href="/fastnet/documentos">Tipo Documento</a></li>
+                    </ul>
+                </li>
+
+                <li class="cd-side__item cd-side__item--has-children cd-side__item--users js-cd-item--has-children">
+                    <a href="#0">Users</a>
+
+                    <ul class="cd-side__sub-list">
+                        <li class="cd-side__sub-item"><a href="/fastnet/users">Administrar</a></li>
+                        <li class="cd-side__sub-item"><a href="#0">Nuevo Usuario</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="cd-side__list js-cd-side__list">
+                <li class="cd-side__label"><span>Acciones Rápidas</span></li>
+                <li class="cd-side__btn"><button class="reset" href="#0">+ Reset</button></li>
+            </ul>
+        </nav>
+
+        <div class="cd-content-wrapper">
+            <div class="text-component text-center">
+                 {% block content %} {# aqui el contrenido #} {% endblock %}
+            </div>
+        </div>
+        <!-- .content-wrapper -->
+    </main>
+    <!-- .cd-main-content -->
+{# 
+		<div class="container">
+            <div class="row mt-5">
+            <div class="col-3">
+                <div class="row">
+                    <div class="col">
+                        <h1><a href="/fastnet/clientes">FASTNET</a></h1>
+                        <ul>
+                            <li><a href="/fastnet/clientes/nuevo">Nuevo Cliente</a></li>
+                            <li><a href="/fastnet/users/nuevo">Nuevo Usuario</a></li>
+                            <li><a href="/fastnet/ips/add">Nuevo ips</a></li>
+                            <li><a href="/fastnet/zonas/add">Nuevo zonas</a></li>
+                            <hr>
+                            <li><a href="/fastnet/contratos/nuevo">Nuevo Contrato</a></li>
+                            <hr>
+                            <li><a href="/fastnet/documentos/add">Agregar Tipo Documento</a></li>
+                            <li><a href="/fastnet/planes/add">Agregar Plan</a></li>
+                            <li><a href="/fastnet/routers/add">Agregar Router</a></li>
+                            <li><a href="/fastnet/zonas/add">Agregar Zona</a></li>
+                            <li><a href="/fastnet/servicios/add">Agregar Servicio</a></li>
+                            <li><a href="/fastnet/instalaciones_tipo/add">Agregar Tipo de Instalación</a></li>
+                            <li><a href="/fastnet/ips/add">Agregar IPs</a></li>
+                        </ul>
+                        <a href="/fastnet/logout" class="btn btn-danger">Logout</a>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col">
+                        <ul>
+                            <li><a href="/fastnet/clientes">Clientes</a></li>
+                            <li><a href="/fastnet/planes">Planes</a></li>
+                            <li><a href="/fastnet/routers">Routers</a></li>
+                            <li><a href="/fastnet/zonas">Zonas</a></li>
+                            <li><a href="/fastnet/servicios">Servicios</a></li>
+                            <li><a href="/fastnet/instalaciones_tipo">Tipos de Instalacion</a></li>
+                            <li><a href="/fastnet/ips">Ips</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-9">
+                
+            </div>
+        </div>
+		</div> #}
+
+			<!-- Optional JavaScript -->
+            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+            <script src="/fastnet/public/js/jquery-3.3.1.slim.min.js"></script>
+            <script src="/fastnet/public/js/popper.min.js"></script>
+            <script src="/fastnet/public/js/bootstrap.min.js"></script>
+            <script src="/fastnet/public/js/bootstrap-select.min.js"></script>
+            <script src="/fastnet/public/js/util.js"></script>
+            <!-- util functions included in the CodyHouse framework -->
+            <script src="/fastnet/public/js/menu-aim.js"></script>
+            <script src="/fastnet/public/js/main.js"></script>
+            <script>
+        $(document).ready(function(){
+        
+
+            $('.cd-side__item--has-children').on('click',function (e) {
+            
+            $('.cd-side__item--has-children').removeClass('cd-side__item--selected');
+            
+            $(this).addClass('cd-side__item--selected');
+
+            });
+        
+        });
+        </script>
+        </body>
+</html>

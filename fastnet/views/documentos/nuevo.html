@@ -1,0 +1,11 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+    <h1>Nuevo Documento</h1>
+
+    <form class="form" action="/fastnet/documentos/save" method="post" >
+        <label for="">Nombre:</label>
+        <input type="text" name="doc_nombre"><br>
+        <button type="submit">Save</button>
+    </form>
+{% endblock %}

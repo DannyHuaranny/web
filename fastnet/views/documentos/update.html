@@ -1,0 +1,11 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+    <h1>Editar Tipo de Documento</h1>
+
+    <form class="form" action="/fastnet/documentos/{{ documento.doc_id }}/update" method="post" >
+        <label for="">Nombre:</label>
+        <input type="text" name="doc_nombre" value="{{ documento.doc_nombre }}">
+        <button type="submit">Save</button>
+    </form>
+{% endblock %}

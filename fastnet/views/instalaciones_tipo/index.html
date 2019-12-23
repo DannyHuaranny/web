@@ -1,0 +1,31 @@
+{% extends "layout.twig" %} {% block content %}
+<h1>Lista Tipos de Instalaciones</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>Nombre Instalación</td>
+
+
+
+            <td></td>
+            <td></td>
+
+        </tr>
+    </thead>
+    <tbody>
+        {% for instalacion_tipo in instalaciones_tipo %}
+        <tr>
+            <td>{{ instalacion_tipo.instalacion_nombre }}</td>
+
+
+
+
+            <td><a href="instalaciones_tipo/{{ instalacion_tipo.instalacion_tipo_id }}/delete">Eliminar</a></td>
+            <td><a href="instalaciones_tipo/{{ instalacion_tipo.instalacion_tipo_id }}/update">Editar</a></td>
+
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

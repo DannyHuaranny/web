@@ -1,0 +1,11 @@
+{% extends "layout.twig" %} {% block content %}
+<h1>Editar Tipo instalacion</h1>
+
+<form class="form" action="/fastnet/instalaciones_tipo/{{ instalacion_tipo.instalacion_tipo_id }}/update" method="post">
+    <label for="">Nombre Servicio:</label>
+    <input type="text" name="instalacion_nombre" value="{{ instalacion_tipo.instalacion_nombre }}"><br>
+
+
+    <button type="submit" class="btn btn-primary">Actualizar</button>
+</form>
+{% endblock %}

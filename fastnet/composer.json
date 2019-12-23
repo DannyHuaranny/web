@@ -1,0 +1,14 @@
+{
+    "name": "pcpichanaki/fastnet",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "require": {
+        "illuminate/database": "^6.5",
+        "zendframework/zend-diactoros": "^2.1",
+        "twig/twig": "^2.12",
+        "aura/router": "^3.1"
+    }
+}

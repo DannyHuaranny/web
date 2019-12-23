@@ -1,0 +1,31 @@
+{% extends "layout.twig" %} {% block content %}
+<h1>Lista de Planes</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>Nombre Plan</td>
+            <td>Subida(MB)</td>
+            <td>Bajada(MB)</td>
+            <td>Costo S./</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for plan in planes %}
+        <tr>
+            <td>{{ plan.plan_nombre }}</td>
+            <td>{{ plan.subida }}</td>
+            <td>{{ plan.bajada }}</td>
+            <td>{{ plan.precio }}</td>
+
+            <td><a href="planes/{{ plan.plan_id }}/delete">Eliminar</a></td>
+            <td><a href="planes/{{ plan.plan_id }}/update">Editar</a></td>
+
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

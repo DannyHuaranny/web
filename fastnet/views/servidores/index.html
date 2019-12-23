@@ -1,0 +1,35 @@
+{% extends "layout.twig" %} {% block content %}
+<h1>Lista de Servidores</h1>
+<a href="servidores/add"><button class="btn btn-success float-left bg-warning">New</button></a>
+<table class="table">
+    <thead>
+        <tr>
+            <td>Nombre Servidor</td>
+            <td>Rango Inicio</td>
+            <td>Rango Fin</td>
+
+
+
+            <td></td>
+            <td></td>
+
+        </tr>
+    </thead>
+    <tbody>
+        {% for servidor in servidores %}
+        <tr>
+            <td>{{ servidor.servidor_nombre }}</td>
+            <td>{{ servidor.rango_inicial }}</td>
+            <td>{{ servidor.rango_final }}</td>
+
+
+
+
+            <td><a href="servidores/{{ servidor.servidor_id }}/delete">Eliminar</a></td>
+            <td><a href="servidores/{{ servidor.servidor_id }}/update">Editar</a></td>
+
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

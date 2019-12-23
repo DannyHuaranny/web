@@ -1,0 +1,31 @@
+{% extends "layout.twig" %} {% block content %}
+<h1>Lista de Servicios</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>Nombre Servicio</td>
+            <td>Precio</td>
+
+
+            <td></td>
+            <td></td>
+
+        </tr>
+    </thead>
+    <tbody>
+        {% for servicio in servicios %}
+        <tr>
+            <td>{{ servicio.servicio_nombre }}</td>
+            <td>{{ servicio.precio }}</td>
+
+
+
+            <td><a href="servicios/{{ servicio.servicio_id }}/delete">Eliminar</a></td>
+            <td><a href="servicios/{{ servicio.servicio_id }}/update">Editar</a></td>
+
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
