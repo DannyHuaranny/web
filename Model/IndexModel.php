@@ -27,14 +27,14 @@
 		}
 	
 		public function ver(){
-			$sql = "SELECT * FROM eventos where ESTADO='A'";
+			/*$sql = "SELECT * FROM eventos where ESTADO='A'";
 			
 
 			foreach ($this->con->query($sql) as $filas) {
 				$this->listado[] = $filas;
 			}
 			
-			return $this->listado;
+			return $this->listado;*/
 		}
 
 	}
