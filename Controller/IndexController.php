@@ -15,7 +15,7 @@ $this->model=new IndexModel;
 
 public function View(){
     
-$datos=$this->model->ver();
+//$datos=$this->model->ver();
 // $this->model->paginacion();
 require_once("Views/index.php");
 }

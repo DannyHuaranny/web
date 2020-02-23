@@ -5,10 +5,7 @@
 	class IndexModel extends Conexion {
 		private $listado;
 
-		public $id;
-		public $nom_mov;
-		public $tipo_mov;
-		public $estado;
+		
 		
 
 
@@ -24,7 +21,7 @@
 		}
 	
 		public function ver(){
-		
+			
 		}
 
 	}
